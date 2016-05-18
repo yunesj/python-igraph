@@ -488,7 +488,7 @@ class IgraphCCoreBuilder(object):
             os.rename("ltmain.sh.new", "ltmain.sh")
 
             print("Configuring igraph...")
-            retcode = subprocess.call("CFLAGS=-fPIC CXXFLAGS=-fPIC ./configure --enable-tls --disable-gmp",
+            retcode = subprocess.call("CFLAGS=-fPIC CXXFLAGS=-fPIC ./configure --disable-tls --disable-gmp",
                     shell=True)
             if retcode:
                 return False
